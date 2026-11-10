@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>VigorBuy spreadsheet | Categorie, foto QC e guida per l’Italia</title>
+  <meta name="description" content="Sfoglia le categorie su Hipobuyfind e usa la guida al VigorBuy spreadsheet per confrontare link prodotto, taglie, foto QC e preventivi per l’Italia.">
+  <meta name="theme-color" content="#172449">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="VigorBuy spreadsheet | Categorie, foto QC e guida per l’Italia">
+  <meta property="og:description" content="Esplora dieci categorie su Hipobuyfind e scopri quali dati controllare prima di scegliere un articolo.">
+  <link rel="preconnect" href="https://static.nike.com">
+  <!-- La ricerca su Bing non ha restituito risultati organici per la query. Per l’analisi editoriale sono stati consultati dieci siti pertinenti tramite una ricerca web integrativa. -->
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172449;
+      --muted: #475373;
+      --paper: #f2f4ff;
+      --rule: #cbd3ec;
+      --lime: #e4fa91;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 1rem/1.6 system-ui, sans-serif; }
+    h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
+    h1, h2, h3 { line-height: 1.15; }
+    h2 { font-size: clamp(1.6rem, 4vw, 2.8rem); letter-spacing: -.035em; }
+    h3 { font-size: 1.2rem; }
+    a { color: inherit; text-underline-offset: .2em; }
+    :is(a, summary):focus-visible { outline: 3px solid #9b3670; outline-offset: 4px; }
+    img { display: block; width: 100%; height: auto; }
+    .wrap { width: min(73rem, calc(100% - 2rem)); margin-inline: auto; }
+    .top { background: var(--ink); color: var(--white); }
+    .top .wrap, .footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .4rem 1rem; padding-block: .8rem; }
+    .brand { font-weight: 800; }
+    .kicker, .category small { font-size: .75rem; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 1rem; margin-block: 1rem; }
+    .hero-copy { display: grid; align-content: center; gap: .85rem; padding: clamp(1.15rem, 4vw, 3rem); background: var(--lime); border-radius: 1rem; }
+    h1 { font-size: clamp(2.3rem, 6vw, 5.3rem); letter-spacing: -.065em; overflow-wrap: anywhere; }
+    .hero-copy p:last-child { max-width: 49ch; }
+    .hero figure { overflow: hidden; background: #dbe4ff; border-radius: 1rem; }
+    .hero img { aspect-ratio: 4/3; object-fit: contain; }
+    figcaption { padding: .55rem .75rem; font-size: .85rem; }
+    .category { background: var(--white); border: 1px solid var(--rule); border-radius: 1rem; padding: 1rem; }
+    .category h2 { font-size: clamp(1.25rem, 3vw, 1.8rem); margin-bottom: .8rem; }
+    .category ol { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .45rem; list-style: none; padding: 0; }
+    .category a { display: flex; align-items: center; gap: .55rem; min-height: 3rem; padding: .4rem .65rem; background: var(--paper); border-radius: .45rem; text-decoration: none; font-weight: 700; }
+    .category a:hover { background: #e1e7ff; text-decoration: underline; }
+    .category small { color: var(--muted); }
+    .section { margin-block: clamp(2rem, 6vw, 4.4rem); }
+    .section > p, .entry p + p { margin-top: .65rem; }
+    .section > p { max-width: 72ch; }
+    .record { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; margin-top: 1rem; overflow: hidden; border: 1px solid var(--rule); border-radius: .8rem; background: var(--rule); }
+    .record div { padding: .8rem; background: var(--white); }
+    dt { font-weight: 750; }
+    dd { margin-top: .2rem; color: var(--muted); }
+    .entries { margin-top: 1rem; border-top: 1px solid var(--rule); }
+    .entry { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.25fr); gap: .7rem 1.5rem; padding-block: 1rem; border-bottom: 1px solid var(--rule); }
+    .entry h3 { padding-top: .15rem; }
+    .gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .7rem; margin-top: 1rem; }
+    .gallery figure { overflow: hidden; background: var(--white); border: 1px solid var(--rule); border-radius: .75rem; }
+    .gallery img { aspect-ratio: 1; object-fit: contain; }
+    .faq { padding: clamp(1rem, 4vw, 2rem); border-radius: 1rem; background: var(--ink); color: var(--white); }
+    .faq h2 { margin-bottom: .7rem; }
+    details { border-top: 1px solid #67728f; }
+    summary { cursor: pointer; font-weight: 750; padding: .8rem 0; }
+    summary:focus-visible { outline-color: var(--lime); }
+    details p { max-width: 74ch; padding-bottom: .9rem; }
+    .footer { border-top: 1px solid var(--rule); font-size: .9rem; }
+    @media (max-width: 56rem) {
+      .category ol { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 40rem) {
+      .hero, .entry { grid-template-columns: 1fr; }
+      .category ol, .record, .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hero img { max-height: 16rem; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "it",
+    "name": "VigorBuy spreadsheet | Categorie, foto QC e guida per l’Italia",
+    "description": "Sfoglia le categorie su Hipobuyfind e usa la guida al VigorBuy spreadsheet per confrontare link prodotto, taglie, foto QC e preventivi per l’Italia.",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "A cosa serve un VigorBuy spreadsheet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Serve a tenere insieme i collegamenti alle schede, le varianti, le misure e le eventuali foto di controllo qualità. Usa una riga per ogni variante che vuoi confrontare."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Come capisco se una foto QC mostra la mia variante?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Confronta codice del modello, colore e taglia con la scheda del venditore. Se dalla foto mancano riferimenti, chiedi un’immagine dell’etichetta o una conferma scritta."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Come scelgo una taglia se la scheda usa misure diverse?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Verifica se la tabella riporta misure del corpo o del capo. Per confrontare due capi, misura quello che ti veste bene nello stesso modo indicato dal venditore."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Dove portano i collegamenti alle categorie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Portano alle categorie di Hipobuyfind. Per ogni articolo verifica sulla relativa scheda disponibilità, venditore e condizioni di acquisto."
+        }
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/dgdbj/">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="https://www.hipobuyfind.com">www.hipobuyfind.com</a>
+      <span class="kicker">Guida indipendente agli acquisti</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="titolo">
+      <div class="hero-copy">
+        <p class="kicker">Schede, misure e foto</p>
+        <h1 id="titolo">VigorBuy spreadsheet</h1>
+        <p>Un VigorBuy spreadsheet raccoglie link prodotto, varianti e appunti per confrontare gli articoli prima di ordinare. Sfoglia le categorie di Hipobuyfind e scopri cosa annotare su taglie, foto di controllo qualità (QC) e consegna in Italia.</p>
+      </div>
+      <figure>
+        <img src="https://static.nike.com/a/images/c_fill,w_720,h_540,f_auto,q_auto:eco/623b57f0-3edf-42e1-b23f-9e0711f2023c/NIKE+DUNK+LOW+RETRO.png" width="720" height="540" loading="eager" fetchpriority="high" alt="Vista laterale di una Nike Dunk Low Retro bianca e nera">
+        <figcaption>Nike Dunk Low Retro · Foto di riferimento</figcaption>
+      </figure>
+    </section>
+
+    <nav class="category" aria-labelledby="categorie">
+      <h2 id="categorie">Dieci categorie da esplorare</h2>
+      <ol>
+        <li><a href="https://hipobuyfind.com/category-911-Shoes.html"><small aria-hidden="true">01</small> Scarpe</a></li>
+        <li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html"><small aria-hidden="true">02</small> Felpe e maglioni</a></li>
+        <li><a href="https://hipobuyfind.com/category-913-T-Shirts.html"><small aria-hidden="true">03</small> T-shirt</a></li>
+        <li><a href="https://hipobuyfind.com/category-914-Jackets.html"><small aria-hidden="true">04</small> Giacche</a></li>
+        <li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html"><small aria-hidden="true">05</small> Pantaloni e shorts</a></li>
+        <li><a href="https://hipobuyfind.com/category-916-Headwear.html"><small aria-hidden="true">06</small> Cappelli</a></li>
+        <li><a href="https://hipobuyfind.com/category-917-Sets.html"><small aria-hidden="true">07</small> Completi</a></li>
+        <li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html"><small aria-hidden="true">08</small> Intimo</a></li>
+        <li><a href="https://hipobuyfind.com/category-919-Jersey.html"><small aria-hidden="true">09</small> Maglie sportive</a></li>
+        <li><a href="https://hipobuyfind.com/category-920-Accessories.html"><small aria-hidden="true">10</small> Accessori</a></li>
+      </ol>
+    </nav>
+
+    <section class="section" aria-labelledby="scheda">
+      <h2 id="scheda">Link prodotto VigorBuy e dati da annotare</h2>
+      <p>Due schede con la stessa foto possono riguardare venditori diversi. Tieni separate le righe quando cambia il venditore o la variante, anche se il nome del modello coincide.</p>
+      <dl class="record" aria-label="Campi da compilare per ciascuna variante">
+        <div><dt>Scheda originale</dt><dd>Link del venditore, codice modello e data della verifica.</dd></div>
+        <div><dt>Variante</dt><dd>Colore esatto, taglia disponibile e misure in centimetri.</dd></div>
+        <div><dt>Foto di controllo</dt><dd>Data delle foto, angoli disponibili ed eventuali dubbi.</dd></div>
+        <div><dt>Totale stimato</dt><dd>Valuta, preventivo di consegna e costi ancora da confermare.</dd></div>
+      </dl>
+    </section>
+
+    <section class="section" aria-labelledby="guide">
+      <h2 id="guide">Tre guide per confrontare gli articoli</h2>
+      <div class="entries">
+        <article class="entry">
+          <h3>Guida alle taglie per scarpe e abbigliamento</h3>
+          <div>
+            <p>Per le sneaker misura entrambi i piedi in appoggio e consulta la tabella del modello per il piede più lungo. La lunghezza della soletta e quella del piede si misurano in modo diverso. Per confrontare una taglia EU con una US, usa la tabella del modello.</p>
+            <p>Per felpe e giacche, misura da ascella ad ascella un capo steso e confronta quella larghezza con la scheda. Per i pantaloni, segna larghezza in vita e lunghezza del cavallo interno. Per i cappelli, controlla l’intervallo di regolazione della circonferenza.</p>
+          </div>
+        </article>
+        <article class="entry">
+          <h3>Foto QC VigorBuy e dettagli da chiedere</h3>
+          <div>
+            <p>Se la scheda mostra solo una foto promozionale, chiedi quali immagini di magazzino sono disponibili per la variante scelta. Nelle scarpe, una foto del tallone e una della suola aiutano a confrontare forma e finitura. Nelle giacche, chiedi primi piani di cerniera, polsini e cuciture.</p>
+            <p>Per una collana o un bracciale, osserva chiusura, maglie e punti di giunzione. Le foto QC documentano i dettagli visibili. Per valutare l’autenticità, verifica la provenienza e la documentazione del venditore.</p>
+          </div>
+        </article>
+        <article class="entry">
+          <h3>Spedizione in Italia e confronto dei preventivi</h3>
+          <div>
+            <p>Chiedi preventivi con lo stesso CAP, lo stesso contenuto e le dimensioni del pacco imballato. Domanda se la tariffa usa il peso reale o quello volumetrico e verifica cosa cambia se scegli di conservare la scatola delle scarpe.</p>
+            <p>Annota separatamente il prezzo dell’articolo, il trasporto al magazzino, le commissioni, la consegna internazionale e gli eventuali oneri indicati. Prima di pagare, confronta il totale in euro, il tracciamento e le condizioni di reso.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="dettagli">
+      <h2 id="dettagli">Dettagli da osservare nelle foto</h2>
+      <p>Queste immagini dei marchi illustrano forma, tessuto e finiture. Disponibilità e caratteristiche degli articoli si verificano sulle singole schede.</p>
+      <div class="gallery">
+        <figure>
+          <img src="https://media.gucci.com/style/DarkGray_Center_0_0_490x490/1761552011/792383_XJGSE_1000_001_100_0000_Light-gg-jacquard-zip-jacket.jpg" width="490" height="490" loading="lazy" decoding="async" alt="Giacca Gucci nera in jacquard GG con zip frontale e collo alto">
+          <figcaption>Gucci · Zip e trama della giacca</figcaption>
+        </figure>
+        <figure>
+          <img src="https://sg.louisvuitton.com/images/is/image/lv/1/PP_VP_M/louis-vuitton--M5381M_PM2_Front%20view.jpg?wid=400&amp;hei=400&amp;fmt=webp" width="400" height="400" loading="lazy" decoding="async" alt="Cappellino nero Louis Vuitton Monogram Essential visto di fronte">
+          <figcaption>Louis Vuitton · Profilo della visiera</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.hermes.com/is/image/hermesproduct/700001FP85_front_wm_101?wid=400&amp;hei=400&amp;fit=fit&amp;$product_default_bg$&amp;fmt=webp" width="400" height="400" loading="lazy" decoding="async" alt="Bracciale rigido Hermès Clic H color crema con chiusura argentata a forma di H">
+          <figcaption>Hermès · Chiusura del bracciale</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.christiandior.com/is/image/diorprod/N2812HOMMTD000_E09?%24top_left_GH_GHC%24=&amp;bfc=on&amp;crop=0%2C1%2C1881%2C1743&amp;hei=400&amp;wid=400&amp;fmt=webp" width="400" height="400" loading="lazy" decoding="async" alt="Collana Dior Oblique argentata con catena a maglie e pendente rettangolare">
+          <figcaption>Dior · Maglie e incisione del pendente</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section faq" aria-labelledby="faq">
+      <h2 id="faq">Domande frequenti</h2>
+      <details open>
+        <summary>A cosa serve un VigorBuy spreadsheet?</summary>
+        <p>Serve a tenere insieme i collegamenti alle schede, le varianti, le misure e le eventuali foto di controllo qualità. Usa una riga per ogni variante che vuoi confrontare.</p>
+      </details>
+      <details>
+        <summary>Come capisco se una foto QC mostra la mia variante?</summary>
+        <p>Confronta codice del modello, colore e taglia con la scheda del venditore. Se dalla foto mancano riferimenti, chiedi un’immagine dell’etichetta o una conferma scritta.</p>
+      </details>
+      <details>
+        <summary>Come scelgo una taglia se la scheda usa misure diverse?</summary>
+        <p>Verifica se la tabella riporta misure del corpo o del capo. Per confrontare due capi, misura quello che ti veste bene nello stesso modo indicato dal venditore.</p>
+      </details>
+      <details>
+        <summary>Dove portano i collegamenti alle categorie?</summary>
+        <p>Portano alle categorie di Hipobuyfind. Per ogni articolo verifica sulla relativa scheda disponibilità, venditore e condizioni di acquisto.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>Guida indipendente all’acquisto</p>
+    <a href="https://www.hipobuyfind.com">Visita Hipobuyfind</a>
+  </footer>
+</body>
+</html>
